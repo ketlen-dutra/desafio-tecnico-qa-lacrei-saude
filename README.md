@@ -1,1 +1,6 @@
-# desafio-tecnico-qa-lacrei-saude
+# 🧪 Desafio Técnico QA - Lacrei Saúde
+
+Repositório contendo casos de teste (Gherkin), automação (Cypress + Cucumber), documentação e relatórios.
+
+## 📁 Estrutura
+
