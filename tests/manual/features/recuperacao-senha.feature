@@ -13,8 +13,8 @@ Feature: Recuperação de senha
   Scenario: Recuperação bem-sucedida
     When informo meu e-mail cadastrado
     And seleciono "Enviar link"
-    Then devo receber o e-mail com o link de redefinição
-    And devo conseguir criar uma nova senha válida
+    And receber o e-mail com o link de redefinição
+    Then devo conseguir criar uma nova senha válida
 
   @negativo
   Scenario: E-mail não cadastrado
