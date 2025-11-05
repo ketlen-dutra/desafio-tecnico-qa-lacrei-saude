@@ -19,18 +19,18 @@ Ambiente:
 Validações realizadas:
 
 📄Preenchimento dos campos
-  ✅ Cadastro
-  ✅ Login
-  ✅ Pós-cadastro
-  ✅ Pesquisar profissional
+ - Cadastro - sucesso
+ - Login - sucesso
+ - Pós-cadastro - sucesso
+ - Pesquisar profissional - sucesso
 
 🔁Redirecionamentos
-  ❌ Redirecionamento tela de 'login'
-  ❌ Redirecionamento tela 'pós-cadastro'
-  ✅ Redirecionamento tela 'pesquisar profissional'
+ - Redirecionamento tela de 'login' - bug
+ - Redirecionamento tela 'pós-cadastro' - bug
+ - Redirecionamento tela 'pesquisar profissional' - sucesso
 
 💬Mensagens de feedback para o usuário
-  ❌ "Cadastro realizado com sucesso" NOK
-  ❌ "E-mail de confirmação de cadastro enviado. Por favor, verifique sua caixa de entrada" NOK
+ - "Cadastro realizado com sucesso" - melhoria
+ - "E-mail de confirmação de cadastro enviado. Por favor, verifique sua caixa de entrada" - melhoria
 
 
