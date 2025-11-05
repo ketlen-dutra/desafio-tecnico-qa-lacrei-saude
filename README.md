@@ -4,12 +4,13 @@ Repositório contendo casos de teste (Gherkin), automação (Cypress + Cucumber)
 
 ## 📁 Estrutura
 
-### 💻 Execução Manual em Mobile (Android - Google Chrome)
+## 💻 Execução Manual em Mobile (Android - DevTools)
 
-📱 Fluxo testado: Cadastro da pessoa usuária
+<details>
+<summary>📱 <b>Fluxo: Cadastro da pessoa usuária (clicar para expandir)</b></summary>
 
 Ambiente:
-- Dispositivo simulado: amsung Galaxy S20 Ultra
+- Dispositivo simulado: samsung Galaxy S20 Ultra
 - Navegador: Google Chrome DevTools (versão 142)
 - User Agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
 - Viewport: 412 × 915 px
@@ -33,4 +34,5 @@ Validações realizadas:
  - "Cadastro realizado com sucesso" - melhoria
  - "E-mail de confirmação de cadastro enviado. Por favor, verifique sua caixa de entrada" - melhoria
 
+</details>
 
