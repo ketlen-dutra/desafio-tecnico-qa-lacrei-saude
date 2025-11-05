@@ -17,7 +17,7 @@ Ambiente:
 - Execução: manual com base nos cenários Gherkin (`tests/manual/features/cadastro.feature`)
 - Evidências: armazenadas em `tests/manual/evidence/cadastro`
 
-Validações realizadas:
+Validações realizadas (cenário positivo):
 
 📄Preenchimento dos campos
  - Cadastro - sucesso
@@ -33,6 +33,14 @@ Validações realizadas:
 💬Mensagens de feedback para o usuário
  - "Cadastro realizado com sucesso" - melhoria
  - "E-mail de confirmação de cadastro enviado. Por favor, verifique sua caixa de entrada" - melhoria
+
+Validações realizadas (cenário negativo):
+
+📄Preenchimento dos campos
+ - Cadastro - sucesso
+
+💬Mensagens de feedback para o usuário 
+- "E-mail já cadastrado" - bug
 
 </details>
 
