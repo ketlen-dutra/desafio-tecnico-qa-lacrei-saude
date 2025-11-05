@@ -1,0 +1,28 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: 🧭 Guia de QA e Documentação
+    url: https://github.com/ketlen-dutra/desafio-tecnico-qa-lacrei-saude
+    about: Consulte a estrutura de testes, documentação e checklist antes de abrir uma issue.
+
+issue_templates:
+  - name: 🐞 Bug Report
+    description: Reportar um erro encontrado durante os testes manuais ou automatizados.
+    title: "[BUG] - "
+    labels: ["bug"]
+    assignees: []
+    template: bug_report.md
+
+  - name: 💡 Improvement Suggestion
+    description: Sugerir uma melhoria de funcionalidade, usabilidade ou desempenho.
+    title: "[IMPROVEMENT] - "
+    labels: ["improvement"]
+    assignees: []
+    template: improvement.md
+
+  - name: 🧪 QA Task / Test Execution
+    description: Registrar execução de testes ou reexecuções.
+    title: "[QA] - "
+    labels: ["qa", "testing"]
+    assignees: []
+    template: task_qa.md
