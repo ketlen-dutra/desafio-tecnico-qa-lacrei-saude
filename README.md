@@ -17,7 +17,7 @@ Ambiente:
 - Execução: manual com base nos cenários Gherkin (`tests/manual/features/cadastro.feature`)
 - Evidências: armazenadas em `tests/manual/evidence/cadastro`
 
-Validações realizadas (cenário positivo):
+Validações realizadas (cenário positivo Cadastro completo e primeira busca):
 
 📄Preenchimento dos campos
  - Cadastro - sucesso
@@ -34,7 +34,7 @@ Validações realizadas (cenário positivo):
  - "Cadastro realizado com sucesso" - melhoria
  - "E-mail de confirmação de cadastro enviado. Por favor, verifique sua caixa de entrada" - melhoria
 
-Validações realizadas (cenário negativo):
+Validações realizadas (cenário negativo Cadastro com e-mail já cadastrado):
 
 📄Preenchimento dos campos
  - Cadastro - sucesso
@@ -58,7 +58,7 @@ Ambiente:
 - Execução: manual com base nos cenários Gherkin (`tests/manual/features/busca-profissional.feature`)
 - Evidências: armazenadas em `tests/manual/evidence/busca-profissional`
 
-Validações realizadas (cenário positivo):
+Validações realizadas (cenário positivo Buscar profissional e entrar em contato):
 
 📄Preenchimento dos campos
  - Busca - sucesso
@@ -74,7 +74,7 @@ Validações realizadas (cenário positivo):
 💬Mensagens de feedback para o usuário
  - "Código enviado para o número informado" - melhoria
 
-Validações realizadas (cenário negativo):
+Validações realizadas (cenário negativo Preencher campo código com código inválido):
 
 📄Preenchimento dos campos
  - Código de verificação - bug
@@ -108,7 +108,7 @@ Validações realizadas (cenário positivo Atualizar informações de perfil):
 💬Mensagens de feedback para o usuário
  - sem mensagem "Dados atualizados com sucesso" - melhoria
 
- Validações realizadas (cenário negativo Atualizar foto de perfil):
+ Validações realizadas (cenário positivo Atualizar foto de perfil):
 
  📄Preenchimento dos campos
  - Campo descrição da foto - bug

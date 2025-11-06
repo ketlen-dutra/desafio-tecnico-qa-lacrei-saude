@@ -13,7 +13,7 @@ Feature: Recuperação de senha
   Scenario: Recuperação bem-sucedida
     When informo meu e-mail cadastrado
     And seleciono "Enviar link"
-    And receber o e-mail com o link de redefinição
+    And recebo o e-mail com o link de redefinição
     Then devo conseguir criar uma nova senha válida
 
   @negativo
