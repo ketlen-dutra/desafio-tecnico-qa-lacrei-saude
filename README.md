@@ -84,3 +84,37 @@ Validações realizadas (cenário negativo):
 
 </details>
 
+<details>
+<summary>📱 <b>Fluxo: Edicão de perfil (clicar para expandir)</b></summary>
+
+Ambiente:
+- Dispositivo simulado: samsung Galaxy S20 Ultra
+- Navegador: Google Chrome DevTools (versão 142)
+- User Agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
+- Viewport: 412 × 915 px
+- Execução: manual com base nos cenários Gherkin (`tests/manual/features/edicao-perfil.feature`)
+- Evidências: armazenadas em `tests/manual/evidence/edicao-perfil`
+
+Validações realizadas (cenário Atualizar informações de perfil):
+
+📄Preenchimento dos campos
+ - Tela "Editar dados" - sucesso
+
+🔁Redirecionamentos e atualizações
+ - Redirecionamento Tela editar dados - sucesso
+ - Redirecionamento Tela "Perfil" após editar dados - sucesso
+ - Visulização dos dados atualizados - sucesso
+
+💬Mensagens de feedback para o usuário
+ - "Dados atualizados com sucesso" - melhoria
+
+Validações realizadas (cenário negativo):
+
+📄Preenchimento dos campos
+ - Código de verificação - bug
+
+💬Mensagens de feedback para o usuário 
+- "Código inválido! Tente novamente" - bloqueado
+
+</details>
+

@@ -4,7 +4,7 @@ Feature: Recuperação de senha
   Para voltar a acessar o sistema
 
   Background:
-    Given que acesso o app no dispositivo mobile (<=600px) pela url: https://paciente.lacreisaude.com.br/redefinicao-de-senha/
+    Given que estou logado no app pelo dispositivo mobile (<=600px) pela url: https://paciente.lacreisaude.com.br/redefinicao-de-senha/
     E com a ferramenta DevTools usando a Dimensions: Samsung Galaxy S20 Ultra 
     E com o User agent selecionado em 'Custom' com a seguinte configuração: 
     Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
