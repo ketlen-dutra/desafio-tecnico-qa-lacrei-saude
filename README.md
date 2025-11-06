@@ -42,5 +42,8 @@ Validações realizadas (cenário negativo):
 💬Mensagens de feedback para o usuário 
 - "E-mail já cadastrado" - bug
 
+🐞Bug fora do fluxo encontrado
+- Foto do profissional não é exibida corretamente
+
 </details>
 
