@@ -63,7 +63,7 @@ Validações realizadas (cenário positivo):
 📄Preenchimento dos campos
  - Busca - sucesso
  - Celular - sucesso
- - Código - bloqueado
+ - Código - bug
 
 🔁Redirecionamentos
  - Redirecionamento lista de profissionais disponíveis - sucesso
@@ -72,7 +72,7 @@ Validações realizadas (cenário positivo):
  - Redirecionamento página para entrar em contato com profissional - bloqueado
 
 💬Mensagens de feedback para o usuário
- - "Código enviado para o número informado" - bug
+ - "Código enviado para o número informado" - melhoria
 
 Validações realizadas (cenário negativo):
 

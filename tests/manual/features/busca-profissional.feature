@@ -11,6 +11,7 @@ Feature: Buscar e contatar profissional
 
 
   @positivo
+  @blocked
   Scenario: Buscar profissional e entrar em contato
     When abro a tela de buscar profissional
     And digito na barra de pesquisa "psicologo"
@@ -25,6 +26,7 @@ Feature: Buscar e contatar profissional
     Then devo visualizar os dados do profissional
 
   @negativo
+  @blocked
   Scenario: Preencher campo código com código inválido
     When preenho o campo código com código inválido
     Then devo visualizar a mensagem "Código inválido! Tente novamente"

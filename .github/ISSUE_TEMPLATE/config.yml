@@ -26,3 +26,10 @@ issue_templates:
     labels: ["qa", "testing"]
     assignees: []
     template: task_qa.md
+
+  - name: "🚫 Blocked Feature / Dependência"
+    about: Registrar uma funcionalidade ou teste bloqueado por bug, dependência técnica ou de outra feature
+    title: "[BLOCKED] - "
+    labels: ["blocked", "dependency", "qa"]
+    assignees: []
+    template: blocked_feature.md
