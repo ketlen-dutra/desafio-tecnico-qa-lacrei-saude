@@ -7,55 +7,56 @@ assignees: ""
 ---
 
 ## 🧩 Descrição da melhoria
-> Explique de forma clara o que pode ser aprimorado e por quê.
-
-**Exemplo:**  
-> A mensagem de sucesso após o cadastro poderia incluir um botão direto para a tela de login, melhorando a navegação do usuário.
+Atualmente, após concluir o fluxo de cadastro, o sistema redireciona o usuário sem exibir nenhuma mensagem de confirmação.
+Essa ausência de feedback visual causa dúvida sobre o sucesso do processo e pode levar o usuário a tentar se cadastrar novamente.
+Sugere-se exibir uma mensagem clara e direta informando que o cadastro foi concluído com sucesso.
 
 ---
 
 ## 🎯 Objetivo da melhoria
-> Qual o impacto esperado com essa melhoria?
-
-**Exemplo:**  
-> Tornar o fluxo de pós-cadastro mais intuitivo e reduzir o número de cliques até o login.
+Melhorar a comunicação e experiência do usuário, garantindo que ele receba um feedback imediato e inequívoco de que o cadastro foi efetuado com sucesso.
 
 ---
 
 ## 🔍 Contexto e problema atual
-> Descreva o cenário atual que motiva a sugestão.
+Durante os testes funcionais (versão mobile), verificou-se que:
 
-**Exemplo:**  
-> Atualmente, o usuário é redirecionado à tela inicial sem orientação após o cadastro, o que pode causar confusão.
+Após preencher o formulário de cadastro e clicar em “Cadastrar”,
+o sistema realiza o redirecionamento automaticamente.
+
+Nenhuma mensagem de sucesso é exibida.
+
+Usuários sem familiaridade com o fluxo não têm certeza se o processo foi finalizado.
+
+Esse comportamento viola uma boa prática de UX: sempre confirmar ações de sucesso.
 
 ---
 
 ## 💭 Proposta de solução
-> Detalhe o que você sugere implementar.
 
-**Exemplo:**  
-> Adicionar botão **“Ir para Login”** na mensagem de confirmação.  
-> Atualizar o texto de feedback para:  
-> “Cadastro realizado com sucesso! Faça login para continuar.”
+Adicionar uma mensagem de feedback logo após o cadastro, antes do redirecionamento.
+Texto sugerido:
 
+"Cadastro realizado com sucesso! Bem-vindo(a) à Lacrei Saúde."
+
+Opcionalmente, incluir um botão CTA:
+
+“Ir para Login” → redireciona diretamente para a tela de autenticação.
+
+Comportamento esperado:
+
+1. Usuário conclui o cadastro.
+2. Mensagem de sucesso aparece.
+3. Após 3–5 segundos, ou ao clicar no botão, ocorre o redirecionamento para a tela de login.
 ---
 
 ## ⚙️ Impacto esperado
 | Categoria | Descrição |
 |------------|------------|
-| 🧭 Experiência do usuário | Melhora a navegação e reduz incertezas |
-| ⚙️ Desempenho | Sem impacto |
-| 🧩 Acessibilidade | Reforça clareza e foco visual |
-| 🧠 Manutenção | Fácil de implementar |
-
----
-
-## 📸 Evidência ou referência (opcional)
-> Inclua imagem, vídeo ou link que ilustre a sugestão.
-
-**Exemplo:**  
-📎 *Referência:*  
-[Exemplo de tela de sucesso com CTA](https://dribbble.com/shots/14231532-Success-Screen-Example)
+| 🧭 Experiência do usuário | Usuário compreende que o cadastro foi concluído com sucesso |
+| ⚙️ Desempenho | Impacto mínimo |
+| 🧩 Acessibilidade | Facilita entendimento do fluxo também por leitores de tela |
+| 🧠 Manutenção | Fácil implementação no frontend |
 
 ---
 
@@ -66,17 +67,20 @@ assignees: ""
 |-------------|-----------------|
 | 🚀 Alta | |
 | ⏱️ Média | |
-| 💤 Baixa | |
+| 💤 Baixa |x |
 
 ---
 
 ## 🧠 Observações adicionais
-> (Opcional) Anote qualquer informação útil, risco técnico ou dependência.
-
-**Exemplo:**  
-> Essa melhoria pode ser feita junto à revisão de feedbacks do módulo de cadastro (Sprint 2).
+sem observações
 
 ---
 
-## 🏷️ Labels sugeridas
-> Adicione as labels correspondentes:
+## 📸 Evidência do estado atual
+
+https://github.com/user-attachments/assets/8383ef78-0760-4934-b31e-28371fb9681c
+
+## 📸 Sugestão de referência
+
+<img width="530" height="361" alt="Image" src="https://github.com/user-attachments/assets/c1252961-b9c0-4fb9-b3eb-36896027cd03" />
+
