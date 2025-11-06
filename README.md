@@ -131,3 +131,37 @@ Validações realizadas (cenário negativo Preencher campo "Nome civil ou social
 
 </details>
 
+<details>
+<summary>📱 <b>Fluxo: Recuperação de senha (clicar para expandir)</b></summary>
+
+Ambiente:
+- Dispositivo simulado: samsung Galaxy S20 Ultra
+- Navegador: Google Chrome DevTools (versão 142)
+- User Agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
+- Viewport: 412 × 915 px
+- Execução: manual com base nos cenários Gherkin (`tests/manual/features/recuperacao-senha.feature`)
+- Evidências: armazenadas em `tests/manual/evidence/recuperacao-senha`
+
+Validações realizadas (cenário positivo Recuperação bem-sucedida):
+
+📄Preenchimento dos campos
+ - Campo "Digite seu e-mail" - sucesso
+
+🔁Redirecionamentos e atualizações
+ - Redirecionamento Tela "enviar link" - sucesso
+ - Recebimento do e-mail de recuperação - sucesso
+ - Redirecionamento botão "redefinir senha" - blocked
+
+💬Mensagens de feedback para o usuário
+ - "Verifique seu e-mail para redefinir a senha" - sucesso
+
+Validações realizadas (cenário negativo E-mail não cadastrado):
+
+📄Preenchimento dos campos
+ - Campo "Digite seu e-mail"- sucesso
+
+💬Mensagens de feedback para o usuário 
+- "Algo deu errado, por favor, confira os dados inseridos e tente novamente" - sucesso
+
+</details>
+

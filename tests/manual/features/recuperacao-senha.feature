@@ -16,7 +16,7 @@ Feature: Recuperação de senha
     And recebo o e-mail com o link de redefinição
     Then devo conseguir criar uma nova senha válida
 
-  @negativo
+  @blocked
   Scenario: E-mail não cadastrado
-    When informo um e-mail inexistente
+    When informo um e-mail não cadastrado
     Then devo visualizar a mensagem "Algo deu errado, por favor, confira os dados inseridos e tente novamente"
