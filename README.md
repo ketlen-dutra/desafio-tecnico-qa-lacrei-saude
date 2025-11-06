@@ -95,7 +95,7 @@ Ambiente:
 - Execução: manual com base nos cenários Gherkin (`tests/manual/features/edicao-perfil.feature`)
 - Evidências: armazenadas em `tests/manual/evidence/edicao-perfil`
 
-Validações realizadas (cenário Atualizar informações de perfil):
+Validações realizadas (cenário positivo Atualizar informações de perfil):
 
 📄Preenchimento dos campos
  - Tela "Editar dados" - sucesso
@@ -106,15 +106,28 @@ Validações realizadas (cenário Atualizar informações de perfil):
  - Visulização dos dados atualizados - sucesso
 
 💬Mensagens de feedback para o usuário
- - "Dados atualizados com sucesso" - melhoria
+ - sem mensagem "Dados atualizados com sucesso" - melhoria
 
-Validações realizadas (cenário negativo):
+ Validações realizadas (cenário negativo Atualizar foto de perfil):
+
+ 📄Preenchimento dos campos
+ - Campo descrição da foto - bug
+
+🔁Redirecionamentos e carregamento
+ - Redirecionamento do botão "editar foto" - sucesso
+ - Carregamento de imagem ao clicar em "enviar foto" - sucesso
+ - Botão de "salvar" - sucesso
+
+💬Mensagens de feedback para o usuário
+ - "Erro ao salvar a foto" - bug
+
+Validações realizadas (cenário negativo Preencher campo "Nome civil ou social" vazio):
 
 📄Preenchimento dos campos
- - Código de verificação - bug
+ - Campo "Nome civil ou sicial" vazio- sucesso
 
 💬Mensagens de feedback para o usuário 
-- "Código inválido! Tente novamente" - bloqueado
+- "Nome deve ser preenchido" - sucesso
 
 </details>
 
