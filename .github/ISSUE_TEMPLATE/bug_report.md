@@ -7,78 +7,62 @@ assignees: ""
 ---
 
 ## 🧩 Descrição do problema
-> Explique de forma clara o que está acontecendo.
-
-**Exemplo:**
-> Ao tentar realizar o cadastro com um e-mail já existente, o sistema permanece em tela de carregamento e não exibe mensagem de erro.
+Após a confirmação de cadastro, o usuário é redirecionado para a tela de login.
 
 ---
 
 ## 🔁 Passos para reproduzir
-> Liste as etapas exatas para reproduzir o bug.
 
-1. Acessar o app no navegador (modo mobile - Android)
-2. Ir até a tela **"Criar conta"**
-3. Inserir um e-mail já cadastrado
-4. Clicar em **"Continuar"**
+1. Acessar o app no navegador (modo mobile - Android) pela url: https://paciente-staging.lacreisaude.com.br/saude/paciente/cadastrar/
+2. Preencher corretamente todos os campos
+3. Clicar em "Cadastrar"
 
 ---
 
 ## 📸 Evidências
-> prints, gravações de tela que ajudem a visualizar o problema.
 
-- [ ] Screenshot anexado  
-- [ ] Vídeo anexado  
+- [x ] Vídeo anexado  
 
-**Exemplo:**  
-`tests/manual/evidence/cadastro_erro_email_existente.png`
+`tests/manual/evidence/cadastro/redirecionamento_tela_login_bug.mp4`
 
 ---
 
 ## ⚙️ Ambiente de Teste
 | Item | Detalhes |
 |------|-----------|
-| Dispositivo | Pixel 5 (Android 12) |
-| Navegador | Google Chrome 121 |
-| Viewport | 393 x 851 px |
+| Dispositivo | Samsung Galaxy S20 Ultra |
+| Navegador | Google Chrome 145 |
+| Viewport | 412 x 915 px |
 | Ambiente | Homologação |
-| Data | {{data_do_teste}} |
+| Data | {{05/11/25}} |
 
 ---
 
 ## 🎯 Resultado Esperado
-> O que deveria acontecer.
-
-**Exemplo:**  
-> O sistema deve exibir a mensagem: “E-mail já cadastrado” e impedir o avanço do cadastro.
+O sistema deveria redirecionar para a tela de "Pós-cadastro"
 
 ---
 
 ## ❌ Resultado Atual
-> O que está acontecendo no momento.
-
-**Exemplo:**  
-> Tela permanece carregando indefinidamente após clicar em “Continuar”.
+O sistema redireciona para a tela de login
 
 ---
 
 ## ⚠️ Impacto e Prioridade
-> Classifique o impacto e a severidade.
 
 | Categoria | Opção marcada |
 |------------|----------------|
-| Impacto no usuário final | 🟥 Crítico / 🟧 Alto / 🟨 Médio / 🟩 Baixo |
-| Prioridade de correção | ⏱️ Urgente / 🚧 Alta / 🕐 Média / 💤 Baixa |
+| Impacto no usuário final | 🟩 Baixo |
+| Prioridade de correção | 💤 Baixa |
 
 ---
 
 ## 🧠 Observações adicionais
-> (Opcional) Adicione observações, hipóteses ou sugestões de causa/solução.
-
-**Exemplo:**  
-> Pode estar relacionado ao endpoint `/v1/user/register` não validando duplicidade de e-mail no backend.
+Caso o redirecionamento esteja conforme a documentação de requisitos, sugiro a exibição de mensagem para que o usuário coloque as credenciais novamente, assim o aplicativo fica mais intuitivo.
 
 ---
+## 📸 Evidências (caso o primeiro link não funcione)
 
-## 🏷️ Labels sugeridas
-> Adicione as labels correspondentes:
+- [x ] Vídeo anexado  
+
+https://github.com/user-attachments/assets/fe5518ab-4f18-4b88-972f-7413687f7bc4
