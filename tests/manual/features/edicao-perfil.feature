@@ -11,7 +11,15 @@ Feature: Inserir e atualizar informações de perfil
 
 
   @positivo
-  Scenario: Atualizar informações de perfil
+  Scenario: Atualizar informações dados
+    When abro a tela de perfil
+    And seleciono "Editar dados"
+    And preencher os campos conforme for necessário
+    And seleciono "Salvar"
+    Then devo ser capaz de visualizar meus dados alterados
+
+  @positivo
+  Scenario: Atualizar foto de perfil
     When abro a tela de perfil
     And seleciono "Editar dados"
     And preencher os campos conforme for necessário
