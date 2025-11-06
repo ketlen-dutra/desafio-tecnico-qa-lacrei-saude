@@ -77,7 +77,7 @@ Validações realizadas (cenário positivo):
 Validações realizadas (cenário negativo):
 
 📄Preenchimento dos campos
- - Código de verificação - bloqueado
+ - Código de verificação - bug
 
 💬Mensagens de feedback para o usuário 
 - "Código inválido! Tente novamente" - bloqueado
