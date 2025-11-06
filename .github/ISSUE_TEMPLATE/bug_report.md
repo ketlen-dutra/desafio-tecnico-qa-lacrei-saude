@@ -52,8 +52,8 @@ O sistema redireciona para a tela de login
 
 | Categoria | Opção marcada |
 |------------|----------------|
-| Impacto no usuário final | 🟩 Baixo |
-| Prioridade de correção | 💤 Baixa |
+| Impacto no usuário final | 🟥 Crítico / 🟧 Alto / 🟨 Médio / 🟩 Baixo |
+| Prioridade de correção | ⏱️ Urgente / 🚧 Alta / 🕐 Média / 💤 Baixa |
 
 ---
 
