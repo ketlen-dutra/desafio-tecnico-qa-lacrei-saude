@@ -43,7 +43,44 @@ Validações realizadas (cenário negativo):
 - "E-mail já cadastrado" - bug
 
 🐞Bug fora do fluxo encontrado
-- Foto do profissional não é exibida corretamente
+- Foto do profissional não é exibida corretamente - bug
+
+</details>
+
+<details>
+<summary>📱 <b>Fluxo: Buscar e contatar profissional (clicar para expandir)</b></summary>
+
+Ambiente:
+- Dispositivo simulado: samsung Galaxy S20 Ultra
+- Navegador: Google Chrome DevTools (versão 142)
+- User Agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
+- Viewport: 412 × 915 px
+- Execução: manual com base nos cenários Gherkin (`tests/manual/features/busca-profissional.feature`)
+- Evidências: armazenadas em `tests/manual/evidence/busca-profissional`
+
+Validações realizadas (cenário positivo):
+
+📄Preenchimento dos campos
+ - Busca - sucesso
+ - Celular - sucesso
+ - Código - bloqueado
+
+🔁Redirecionamentos
+ - Redirecionamento lista de profissionais disponíveis - sucesso
+ - Redirecionamento página do profissional - sucesso
+ - Redirecionamento página exibir contato - sucesso
+ - Redirecionamento página para entrar em contato com profissional - bloqueado
+
+💬Mensagens de feedback para o usuário
+ - "Código enviado para o número informado" - bug
+
+Validações realizadas (cenário negativo):
+
+📄Preenchimento dos campos
+ - Código de verificação - bloqueado
+
+💬Mensagens de feedback para o usuário 
+- "Código inválido! Tente novamente" - bloqueado
 
 </details>
 
