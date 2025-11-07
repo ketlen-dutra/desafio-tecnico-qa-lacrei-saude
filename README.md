@@ -165,3 +165,124 @@ Validações realizadas (cenário negativo E-mail não cadastrado):
 
 </details>
 
+## 🚀 Automação e CI/CD
+
+### ⚙️ Configuração do ambiente
+**Requisitos:**
+- Node.js v20+
+- Cypress v15.6.0
+- TypeScript
+- Dependências instaladas:
+  ```bash
+  npm install
+  ```
+
+---
+
+### 🧩 Execução local dos testes automatizados
+Os testes utilizam **Cypress + Cucumber** com sintaxe Gherkin (`.feature`) para automação E2E do fluxo de **cadastro completo e primeira busca**.
+
+**Rodar o teste específico:**
+```bash
+npx cypress run --spec "tests/automation/cypress/cucumber/cadastro.feature"
+```
+
+**Abrir o modo interativo (visual):**
+```bash
+npx cypress open
+```
+
+> Dica: no modo interativo, selecione o navegador **Electron** (padrão) e clique na spec `cadastro.feature` para executar o fluxo completo.
+
+---
+
+### 🧾 Geração de relatórios
+Os relatórios são gerados automaticamente pelo **Mochawesome Reporter**.
+
+**Configuração usada (`cypress.config.ts`):**
+```ts
+reporter: "cypress-mochawesome-reporter",
+reporterOptions: {
+  reportDir: "tests/automation/reports",
+  overwrite: false,
+  html: true,
+  json: true
+}
+```
+
+**Complemento no arquivo `e2e.ts`:**
+```ts
+import "cypress-mochawesome-reporter/register";
+```
+
+**Saída esperada:**
+- Relatórios: `tests/automation/reports/*.html`
+- Vídeos: `cypress/videos/`
+- Screenshots: `cypress/screenshots/`
+
+---
+
+### 🤖 Execução automática via GitHub Actions
+Os testes são executados automaticamente a cada **push** ou **pull request** para a branch `main`.
+
+**Pipeline:** `.github/workflows/ci-e2e.yml`
+```yaml
+name: e2e-tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests
+        run: npx cypress run --spec "tests/automation/cypress/cucumber/cadastro.feature"
+
+      - name: Save Cypress reports and videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            tests/automation/reports/**
+            cypress/videos/**
+            cypress/screenshots/**
+```
+
+---
+
+### 📁 Estrutura das pastas
+```
+tests/
+├─ automation/
+│  ├─ cypress/
+│  │  ├─ cucumber/
+│  │  │  └─ cadastro.feature
+│  │  ├─ e2e/
+│  │  │  └─ cadastro.cy.ts
+│  │  ├─ support/
+│  │  │  └─ e2e.ts
+│  │  └─ reports/
+│  └─ ...
+└─ manual/
+   ├─ features/
+   ├─ evidence/
+   └─ ...
+```
+
+
+
