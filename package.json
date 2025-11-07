@@ -1,0 +1,34 @@
+{
+  "name": "desafio-tecnico-qa-lacrei-saude",
+  "version": "1.0.0",
+  "description": "Repositório contendo casos de teste (Gherkin), automação (Cypress + Cucumber), documentação e relatórios.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ketlen-dutra/desafio-tecnico-qa-lacrei-saude.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ketlen-dutra/desafio-tecnico-qa-lacrei-saude/issues"
+  },
+  "homepage": "https://github.com/ketlen-dutra/desafio-tecnico-qa-lacrei-saude#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.7",
+    "@types/node": "^24.10.0",
+    "cypress": "^15.6.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "typescript": "^5.9.3"
+  }
+}
