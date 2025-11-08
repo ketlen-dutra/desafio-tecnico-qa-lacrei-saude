@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-08T02:18:08.028Z",
+    "end": "2025-11-08T02:18:12.638Z",
+    "duration": 4610,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a0f405cb-1e11-4503-b216-fe66613745a6",
+      "title": "",
+      "fullFile": "tests\\automation\\cypress\\cucumber\\cadastro.feature",
+      "file": "tests\\automation\\cypress\\cucumber\\cadastro.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b3c5d8f-5559-4519-9fd8-092493a37ac3",
+          "title": "Cadastro da pessoa usuária",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastro completo e primeira busca",
+              "fullTitle": "Cadastro da pessoa usuária Cadastro completo e primeira busca",
+              "timedOut": null,
+              "duration": 4567,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\cadastro.feature\\\\Cadastro da pessoa usuária -- Cadastro completo e primeira busca (failed).png\"\n    ]\n  ]\n}",
+              "code": "var _a2, _b2, _c2, _d, _e;\n(0, assertions_1.assert)(context.includedPickles[0].id === pickle.id, \"Included pickle stack is unsynchronized\");\nconst { remainingSteps, testCaseStartedId } = retrieveInternalSpecProperties();\ntaskTestCaseStarted(context, {\n  id: testCaseStartedId,\n  testCaseId,\n  attempt: attempt++,\n  timestamp: (0, messages_1.createTimestamp)()\n});\nwindow.testState = {\n  gherkinDocument,\n  pickles,\n  pickle\n};\nconst onAfterStep = (options) => {\n  var _a3, _b3, _c3;\n  const { testStepId, start, result } = options;\n  const end = (0, messages_1.createTimestamp)();\n  if (result === \"pending\" || result === \"skipped\") {\n    if (result === \"pending\") {\n      taskTestStepFinished(context, {\n        testStepId,\n        testCaseStartedId,\n        testStepResult: {\n          status: messages_enums_1.TestStepResultStatus.PENDING,\n          duration: (0, messages_1.duration)(start, end)\n        },\n        timestamp: end\n      });\n    } else {\n      taskTestStepFinished(context, {\n        testStepId,\n        testCaseStartedId,\n        testStepResult: {\n          status: messages_enums_1.TestStepResultStatus.SKIPPED,\n          duration: (0, messages_1.duration)(start, end)\n        },\n        timestamp: end\n      });\n    }\n    remainingSteps.shift();\n    for (const skippedStep of remainingSteps) {\n      const hookIdOrPickleStepId = (0, assertions_1.ensure)((_b3 = (_a3 = skippedStep.hook) === null || _a3 === void 0 ? void 0 : _a3.id) !== null && _b3 !== void 0 ? _b3 : (_c3 = skippedStep.pickleStep) === null || _c3 === void 0 ? void 0 : _c3.id, \"Expected a step to either be a hook or a pickleStep\");\n      const testStepId2 = getTestStepId({\n        context,\n        pickleId: pickle.id,\n        hookIdOrPickleStepId\n      });\n      taskTestStepStarted(context, {\n        testStepId: testStepId2,\n        testCaseStartedId,\n        timestamp: (0, messages_1.createTimestamp)()\n      });\n      taskTestStepFinished(context, {\n        testStepId: testStepId2,\n        testCaseStartedId,\n        testStepResult: {\n          status: messages_enums_1.TestStepResultStatus.SKIPPED,\n          duration: {\n            seconds: 0,\n            nanos: 0\n          }\n        },\n        timestamp: (0, messages_1.createTimestamp)()\n      });\n    }\n    for (let i = 0, count = remainingSteps.length; i < count; i++) {\n      remainingSteps.pop();\n    }\n    cy.then(() => this.skip());\n  } else {\n    taskTestStepFinished(context, {\n      testStepId,\n      testCaseStartedId,\n      testStepResult: {\n        status: messages_enums_1.TestStepResultStatus.PASSED,\n        duration: (0, messages_1.duration)(start, end)\n      },\n      timestamp: end\n    });\n    remainingSteps.shift();\n  }\n};\nfor (const step of steps) {\n  if (step.hook) {\n    const hook = step.hook;\n    const testStepId = getTestStepId({\n      context,\n      pickleId: pickle.id,\n      hookIdOrPickleStepId: hook.id\n    });\n    cy.then(() => {\n      delete window.testState.pickleStep;\n      const start = (0, messages_1.createTimestamp)();\n      internalProperties.currentStepStartedAt = start;\n      taskTestStepStarted(context, {\n        testStepId,\n        testCaseStartedId,\n        timestamp: start\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const options = {\n        pickle,\n        gherkinDocument,\n        testCaseStartedId\n      };\n      return (0, cypress_1.runStepWithLogGroup)({\n        fn: dryRun ? noopFn : () => registry2.runCaseHook(this, hook, options),\n        keyword: hook.keyword,\n        text: createStepDescription(hook)\n      }).then((result) => {\n        return { start, result };\n      });\n    }).then(({ start, result }) => onAfterStep({ start, result, testStepId }));\n  } else if (step.pickleStep) {\n    const pickleStep = step.pickleStep;\n    const testStepId = getTestStepId({\n      context,\n      pickleId: pickle.id,\n      hookIdOrPickleStepId: pickleStep.id\n    });\n    const text = (0, assertions_1.ensure)(pickleStep.text, \"Expected pickle step to have a text\");\n    const scenarioStep = (0, assertions_1.ensure)(context.astIdsMap.get((0, assertions_1.ensure)((_a2 = pickleStep.astNodeIds) === null || _a2 === void 0 ? void 0 : _a2[0], \"Expected to find at least one astNodeId\")), `Expected to find scenario step associated with id = ${(_b2 = pickleStep.astNodeIds) === null || _b2 === void 0 ? void 0 : _b2[0]}`);\n    const argument = ((_c2 = pickleStep.argument) === null || _c2 === void 0 ? void 0 : _c2.dataTable) ? new data_table_1.default(pickleStep.argument.dataTable) : ((_e = (_d = pickleStep.argument) === null || _d === void 0 ? void 0 : _d.docString) === null || _e === void 0 ? void 0 : _e.content) ? pickleStep.argument.docString.content : void 0;\n    cy.then(() => {\n      window.testState.pickleStep = step.pickleStep;\n      const start = (0, messages_1.createTimestamp)();\n      internalProperties.currentStep = { pickleStep };\n      internalProperties.currentStepStartedAt = start;\n      taskTestStepStarted(context, {\n        testStepId,\n        testCaseStartedId,\n        timestamp: start\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const beforeStepHooks = registry2.resolveBeforeStepHooks(tags);\n      const afterStepHooks = registry2.resolveAfterStepHooks(tags);\n      const options = {\n        pickle,\n        pickleStep,\n        gherkinDocument,\n        testCaseStartedId,\n        testStepId\n      };\n      const beforeHooksChain = beforeStepHooks.reduce((chain, beforeStepHook) => {\n        return chain.then(() => (0, cypress_1.runStepWithLogGroup)({\n          keyword: \"BeforeStep\",\n          text: createStepDescription(beforeStepHook),\n          fn: dryRun ? noopFn : () => registry2.runStepHook(this, beforeStepHook, options)\n        }));\n      }, cy.wrap({}, { log: false }));\n      return beforeHooksChain.then(() => {\n        try {\n          return (0, cypress_1.runStepWithLogGroup)({\n            keyword: (0, assertions_1.ensure)(\"keyword\" in scenarioStep && scenarioStep.keyword, \"Expected to find a keyword in the scenario step\"),\n            argument,\n            text,\n            fn: () => registry2.runStepDefinition(this, text, dryRun, argument)\n          }).then((result) => {\n            return afterStepHooks.reduce((chain, afterStepHook) => {\n              return chain.then(() => (0, cypress_1.runStepWithLogGroup)({\n                keyword: \"AfterStep\",\n                text: createStepDescription(afterStepHook),\n                fn: dryRun ? noopFn : () => registry2.runStepHook(this, afterStepHook, options)\n              }));\n            }, cy.wrap({}, { log: false })).then(() => {\n              return { start, result };\n            });\n          });\n        } catch (e) {\n          if (e instanceof registry_1.MissingDefinitionError) {\n            throw new Error(createMissingStepDefinitionMessage(context, pickleStep, context.registry.parameterTypeRegistry));\n          } else {\n            throw e;\n          }\n        }\n      });\n    }).then(({ start, result }) => onAfterStep({ start, result, testStepId }));\n  }\n}",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://paciente-staging.lacreisaude.com.br/api/auth/confirm?token=mocked_token_123\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://paciente-staging.lacreisaude.com.br/api/auth/confirm?token=mocked_token_123\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/15.6.0 Chrome/138.0.7204.251 Electron/37.6.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"_clsk=15ov7ha%5E1762568290667%5E1%5E1%5Ek.clarity.ms%2Fcollect; _clck=sfl575%5E2%5Eg0u%5E0%5E2138; _ga=GA1.1.263774492.1762568289; _ga_18ZPMS51R2=GS2.1.s1762568289$o1$g1$t1762568290$j59$l0$h0\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Sat, 08 Nov 2025 02:18:11 GMT\",\n  \"content-type\": \"text/html\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"last-modified\": \"Thu, 30 Oct 2025 17:42:26 GMT\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-amz-error-code\": \"NoSuchKey\",\n  \"x-amz-error-message\": \"The specified key does not exist.\",\n  \"x-amz-error-detail-key\": \"api/auth/confirm\",\n  \"x-amz-request-id\": \"DPG8BGV8G953A5XR\",\n  \"x-amz-id-2\": \"6HHbv6yb56/McaJJcWhlYYt0N8bpXTmqvdwfayx1wbgdX7kN5VOs0S9O0qOf4EVH6kq+SWWneontj2uEZQRIzMYZhLAuY3Ns\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"server\": \"cloudflare\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"strict-transport-security\": \"max-age=31536000; includeSubDomains; preload\",\n  \"content-encoding\": \"gzip\",\n  \"cf-ray\": \"99b1940d3d9c7a84-GRU\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: <!DOCTYPE html><html lang=\"pt-BR\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width\" data-next-head=\"\"/><link rel=\"icon\" href=\"/favicon.ico\"/><link rel=\"shortcut icon\" href=\"/favicon.svg\" type=\"image/x-icon\"/><script>\n      (function(c,l,a,r,i,t,y){\n        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n        t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n      })(window, document, \"clarity\", \"script\", \"ing6d91k4n\");\n    </script><script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-18ZPMS51R2\"></script><script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag(){dataLayer.push(arguments);}\n      gtag('js', new Date());\n\n      gtag('config', 'G-18ZPMS51R2', {\npage_path: window.location.pathname,\n      });\n      </script><link rel=\"preload\" href=\"/_next/static/media/21e3314edf876f32-s.p.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-font=\"size-adjust\"/><link rel=\"preload\" href=\"/_next/static/css/acd3181ef8676e22.css\" as=\"style\"/><link rel=\"stylesheet\" href=\"/_next/static/css/acd3181ef8676e22.css\" data-n-g=\"\"/><noscript data-n-css=\"\"></noscript><script defer=\"\" nomodule=\"\" src=\"/_next/static/chunks/polyfills-42372ed130431b0a.js\"></script><script src=\"/_next/static/chunks/webpack-a91c5b7bfa5e5954.js\" defer=\"\"></script><script src=\"/_next/static/chunks/framework-f75312fc4004b783.js\" defer=\"\"></script><script src=\"/_next/static/chunks/main-11dc982fdc6f7820.js\" defer=\"\"></script><script src=\"/_next/static/chunks/pages/_app-37b520886d559e4b.js\" defer=\"\"></script><script src=\"/_next/static/chunks/696-877bba71b8e9beb3.js\" defer=\"\"></script><script src=\"/_next/static/chunks/pages/index-638c8282c2f168f6.js\" defer=\"\"></script><script src=\"/_next/static/m3eqPbPvtGUAZ2N_3AMbZ/_buildManifest.js\" defer=\"\"></script><script src=\"/_next/static/m3eqPbPvtGUAZ2N_3AMbZ...\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://paciente-staging.lacreisaude.com.br/api/auth/confirm?token=mocked_token_123\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://paciente-staging.lacreisaude.com.br/api/auth/confirm?token=mocked_token_123\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/15.6.0 Chrome/138.0.7204.251 Electron/37.6.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"_clsk=15ov7ha%5E1762568290667%5E1%5E1%5Ek.clarity.ms%2Fcollect; _clck=sfl575%5E2%5Eg0u%5E0%5E2138; _ga=GA1.1.263774492.1762568289; _ga_18ZPMS51R2=GS2.1.s1762568289$o1$g1$t1762568290$j59$l0$h0\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Sat, 08 Nov 2025 02:18:11 GMT\",\n  \"content-type\": \"text/html\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"last-modified\": \"Thu, 30 Oct 2025 17:42:26 GMT\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-amz-error-code\": \"NoSuchKey\",\n  \"x-amz-error-message\": \"The specified key does not exist.\",\n  \"x-amz-error-detail-key\": \"api/auth/confirm\",\n  \"x-amz-request-id\": \"DPG8BGV8G953A5XR\",\n  \"x-amz-id-2\": \"6HHbv6yb56/McaJJcWhlYYt0N8bpXTmqvdwfayx1wbgdX7kN5VOs0S9O0qOf4EVH6kq+SWWneontj2uEZQRIzMYZhLAuY3Ns\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"server\": \"cloudflare\",\n  \"x-frame-options\": \"SAMEORIGIN\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"strict-transport-security\": \"max-age=31536000; includeSubDomains; preload\",\n  \"content-encoding\": \"gzip\",\n  \"cf-ray\": \"99b1940d3d9c7a84-GRU\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400\"\n}\nBody: <!DOCTYPE html><html lang=\"pt-BR\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width\" data-next-head=\"\"/><link rel=\"icon\" href=\"/favicon.ico\"/><link rel=\"shortcut icon\" href=\"/favicon.svg\" type=\"image/x-icon\"/><script>\n      (function(c,l,a,r,i,t,y){\n        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n        t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;\n        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n      })(window, document, \"clarity\", \"script\", \"ing6d91k4n\");\n    </script><script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-18ZPMS51R2\"></script><script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag(){dataLayer.push(arguments);}\n      gtag('js', new Date());\n\n      gtag('config', 'G-18ZPMS51R2', {\npage_path: window.location.pathname,\n      });\n      </script><link rel=\"preload\" href=\"/_next/static/media/21e3314edf876f32-s.p.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\" data-next-font=\"size-adjust\"/><link rel=\"preload\" href=\"/_next/static/css/acd3181ef8676e22.css\" as=\"style\"/><link rel=\"stylesheet\" href=\"/_next/static/css/acd3181ef8676e22.css\" data-n-g=\"\"/><noscript data-n-css=\"\"></noscript><script defer=\"\" nomodule=\"\" src=\"/_next/static/chunks/polyfills-42372ed130431b0a.js\"></script><script src=\"/_next/static/chunks/webpack-a91c5b7bfa5e5954.js\" defer=\"\"></script><script src=\"/_next/static/chunks/framework-f75312fc4004b783.js\" defer=\"\"></script><script src=\"/_next/static/chunks/main-11dc982fdc6f7820.js\" defer=\"\"></script><script src=\"/_next/static/chunks/pages/_app-37b520886d559e4b.js\" defer=\"\"></script><script src=\"/_next/static/chunks/696-877bba71b8e9beb3.js\" defer=\"\"></script><script src=\"/_next/static/chunks/pages/index-638c8282c2f168f6.js\" defer=\"\"></script><script src=\"/_next/static/m3eqPbPvtGUAZ2N_3AMbZ/_buildManifest.js\" defer=\"\"></script><script src=\"/_next/static/m3eqPbPvtGUAZ2N_3AMbZ...\n\n\nhttps://on.cypress.io/request\n    at <unknown> (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:135785:72)\n    at tryCatcher (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:1671:18)\n    at _drainQueueStep (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Object.proxyGetter [as get] (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:80741:22)\n    at exists (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:150544:26)\n    at elExists (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:150559:10)\n    at ensureExistence (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:150740:22)\n    at onFailFn (https://paciente-staging.lacreisaude.com.br/__cypress/runner/cypress_runner.js:150769:53)",
+                "diff": null
+              },
+              "uuid": "6266f1f5-fd3a-4bc2-aba6-ff489615d26d",
+              "parentUUID": "3b3c5d8f-5559-4519-9fd8-092493a37ac3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6266f1f5-fd3a-4bc2-aba6-ff489615d26d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4567,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "tests\\automation\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

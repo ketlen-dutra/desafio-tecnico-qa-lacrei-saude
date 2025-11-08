@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-08T01:04:37.827Z",
+    "end": "2025-11-08T01:04:38.140Z",
+    "duration": 313,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa11f1cc-6af6-4db2-a022-d32aeaa6f4f0",
+      "title": "",
+      "fullFile": "tests\\automation\\cypress\\cucumber\\cadastro.feature",
+      "file": "tests\\automation\\cypress\\cucumber\\cadastro.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 293,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\cadastro.feature\\\\An uncaught error was detected outside of a test (failed).png\"\n    ]\n  ]\n}",
+          "code": "throw err;",
+          "err": {
+            "message": "Error: The following error originated from your test code, not from Cypress.\n\n  > This Cucumber Expression has a problem at column 22:\n\nselecionar os campos {Li e concordo com os Termos de uso e Política de privacidade} {Tenho 18 anos ou mais}\n                     ^------------------------------------------------------------^\nUndefined parameter type 'Li e concordo com os Termos de uso e Política de privacidade'.\nPlease register a ParameterType for 'Li e concordo com os Termos de uso e Política de privacidade'\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Error: The following error originated from your test code, not from Cypress.\n\n  > This Cucumber Expression has a problem at column 22:\n\nselecionar os campos {Li e concordo com os Termos de uso e Política de privacidade} {Tenho 18 anos ou mais}\n                     ^------------------------------------------------------------^\nUndefined parameter type 'Li e concordo com os Termos de uso e Política de privacidade'.\nPlease register a ParameterType for 'Li e concordo com os Termos de uso e Política de privacidade'\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at UndefinedParameterTypeError2.CucumberExpressionError2 [as constructor] (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:58:46)\n    at new UndefinedParameterTypeError2 (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:381:32)\n    at createUndefinedParameterType (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:390:16)\n    at CucumberExpression2.rewriteParameter (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6869:66)\n    at CucumberExpression2.rewriteToRegex (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6806:29)\n    at eval (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6881:28)\n    at Array.map (<anonymous>)\n    at CucumberExpression2.rewriteExpression (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6880:44)\n    at CucumberExpression2.rewriteToRegex (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6808:29)\n    at new CucumberExpression2 (https://paciente-staging.lacreisaude.com.br/__cypress/tests?p=tests\\automation\\cypress\\cucumber\\cadastro.feature:6792:32)",
+            "diff": null
+          },
+          "uuid": "e09d55d3-5275-4944-b48f-61d3daf59556",
+          "parentUUID": "aa11f1cc-6af6-4db2-a022-d32aeaa6f4f0",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "e09d55d3-5275-4944-b48f-61d3daf59556"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 293,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "tests\\automation\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
