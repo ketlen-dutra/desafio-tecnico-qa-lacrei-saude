@@ -313,12 +313,7 @@ tests/
   - **Notas**:
   - O carregamento inicial é rápido e estável, com FCP inferior a 1 segundo.
   - O principal gargalo está no **Largest Contentful Paint (LCP)** de 5,5s — causado principalmente por imagens grandes e scripts não otimizados.
-  - Recomenda-se:
-    - Otimizar imagens e utilizar formatos modernos (WebP/AVIF);
-    - Implementar `preconnect` e cache eficiente para recursos estáticos;
-    - Minificar e eliminar JavaScript não utilizado;
-    - Aplicar lazy loading em imagens abaixo da dobra.
-    - Relatório completo em: `.lighthouseci/report_busca_profissional.html`
+  - Relatório completo em: `.lighthouseci/report_busca_profissional.html`
 
   </details>
 
