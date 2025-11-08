@@ -1,0 +1,9 @@
+# -------------------------------
+# FLUXO DE CADASTRO E PÓS-CADASTRO
+# -------------------------------
+https://paciente.lacreisaude.com.br/cadastro
+
+# -------------------------------
+# FLUXO DE BUSCA DE PROFISSIONAL
+# -------------------------------
+https://paciente.lacreisaude.com.br/buscar-profissional

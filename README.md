@@ -284,5 +284,44 @@ tests/
    └─ ...
 ```
 
+## 🚀 Testes de Desempenho
+
+<details>
+<summary>📱 <b>Tempo de resposta (clicar para expandir)</b></summary>
+
+- **Cenário de teste**: `tests/performance/performance.feature
+- **URL testada**: https://paciente.lacreisaude.com.br/cadastro
+- **URL testada**: https://paciente.lacreisaude.com.br/buscar-profissional/
+- **Ferramenta**: Lighthouse CI (mobile)
+- **Screenshots das evidências**: `tests/performance/evidence`
+
+- **Tela Cadastro**
+  - First Contentful Paint: **1.0s** ✅
+  - Largest Contentful Paint: **4.2s** ⚠️ (abaixo da meta de 2.5s)
+  - Speed Index: **3.0s** ✅
+- **Notas**:
+  - Página apresenta bom tempo de resposta inicial, mas o carregamento do maior conteúdo (imagem/texto principal) ainda pode ser otimizado.
+  - Relatório completo em: `.lighthouseci/report_cadastro.html`
+
+- **Busca Profissional**
+  - First Contentful Paint:** **0.9s** ✅  
+  - Largest Contentful Paint:** **5.5s** ⚠️ (acima da meta de 2.5s)  
+  - Total Blocking Time:** **340ms** ⚠️ (dentro do limite aceitável, mas pode ser otimizado)  
+  - Speed Index:** **3.0s** ✅  
+  - Cumulative Layout Shift:** **0.005** ✅ (excelente estabilidade visual)  
+  - Score de Performance:** **71/100**
+- **Notas**:
+  - O carregamento inicial é rápido e estável, com FCP inferior a 1 segundo.
+  - O principal gargalo está no **Largest Contentful Paint (LCP)** de 5,5s — causado principalmente por imagens grandes e scripts não otimizados.
+  - Recomenda-se:
+    - Otimizar imagens e utilizar formatos modernos (WebP/AVIF);
+    - Implementar `preconnect` e cache eficiente para recursos estáticos;
+    - Minificar e eliminar JavaScript não utilizado;
+    - Aplicar lazy loading em imagens abaixo da dobra.
+    - Relatório completo em: `.lighthouseci/report_busca_profissional.html`
+
+  </details>
+
+
 
 

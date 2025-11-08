@@ -1,0 +1,36 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://paciente.lacreisaude.com.br/cadastro/",
+        "https://paciente.lacreisaude.com.br/buscar-profissional/"
+      ],
+      "settings": {
+        "formFactor": "mobile",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 915,
+          "deviceScaleFactor": 2.625,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36",
+        "throttlingMethod": "simulate",
+        "onlyCategories": ["performance"]
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "first-contentful-paint": ["error", { "maxNumericValue": 3000 }],
+        "interactive": ["error", { "maxNumericValue": 5000 }],
+        "server-response-time": ["error", { "maxNumericValue": 500 }],
+        "categories:performance": ["error", { "minScore": 0.8 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "lighthouse/.lighthouseci"
+    }
+  }
+}

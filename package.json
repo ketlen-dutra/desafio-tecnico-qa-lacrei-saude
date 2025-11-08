@@ -8,7 +8,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test:positivo": "cypress run --env TAGS='@positivo'"
+    "test:positivo": "cypress run --env TAGS='@positivo'",
+    "perf:serve": "npx http-server -p 5173 -c-1 .",
+    "perf:lighthouse": "lhci autorun --config=./lighthouse/lhci-mobile.json",
+    "a11y": "cypress run --env TAGS='@a11y'",
+    "responsive": "cypress run --env TAGS='@responsive'"
   },
   "repository": {
     "type": "git",
@@ -25,9 +29,12 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.7",
+    "@lhci/cli": "^0.15.1",
     "@types/node": "^24.10.0",
     "cypress": "^15.6.0",
     "cypress-mochawesome-reporter": "^4.0.2",
+    "http-server": "^14.1.1",
+    "lighthouse": "^13.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
