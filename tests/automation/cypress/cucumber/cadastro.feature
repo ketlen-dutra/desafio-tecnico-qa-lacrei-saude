@@ -24,7 +24,10 @@ Feature: Cadastro da pessoa usuária
     And sou redirecionado para a página de login
     And preencho os campos válidos E-mail Senha
     And clico em Entrar
-    Then sou redirecionado para a página de pós cadastro
+    Then sou redirecionado para a página de boas-vindas
+
+    When clico em Continuar cadastro
+    Then sou redirecionado para a página de pos cadastro
 
     When eu seleciono a opção a/Ela/Dela
     And clico em Próximo

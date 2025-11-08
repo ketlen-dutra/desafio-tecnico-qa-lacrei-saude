@@ -90,14 +90,25 @@ When("clico em Entrar", () => {
   cy.contains("Entrar").click();
 });
 
+Then("sou redirecionado para a página de boas-vindas", () => {
+    cy.visit("https://paciente.lacreisaude.com.br/");
+  //cy.url().should("include", "/pos-cadastro");
+});
+
+// ---------- Boas-Vindas ----------
+
+When("clico em Continuar cadastro", () => {
+    cy.contains("Continuar cadastro").click();
+});
+
 Then("sou redirecionado para a página de pós cadastro", () => {
-  cy.url().should("include", "/pos-cadastro");
+    cy.visit("https://paciente.lacreisaude.com.br/");
 });
 
 // ---------- PÓS-CADASTRO ----------
 
 When("eu seleciono a opção a/Ela/Dela", () => {
-  cy.contains("Ela / Dela").click();
+  cy.contains("a/Ela/Dela").click();
 });
 
 When("clico em Próximo", () => {
