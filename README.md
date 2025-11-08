@@ -299,18 +299,18 @@ tests/
   - First Contentful Paint: **1.0s** ✅
   - Largest Contentful Paint: **4.2s** ⚠️ (abaixo da meta de 2.5s)
   - Speed Index: **3.0s** ✅
-- **Notas**:
+  - **Notas**:
   - Página apresenta bom tempo de resposta inicial, mas o carregamento do maior conteúdo (imagem/texto principal) ainda pode ser otimizado.
   - Relatório completo em: `.lighthouseci/report_cadastro.html`
 
-- **Busca Profissional**
+- **Tela Busca Profissional**
   - First Contentful Paint:** **0.9s** ✅  
   - Largest Contentful Paint:** **5.5s** ⚠️ (acima da meta de 2.5s)  
   - Total Blocking Time:** **340ms** ⚠️ (dentro do limite aceitável, mas pode ser otimizado)  
   - Speed Index:** **3.0s** ✅  
   - Cumulative Layout Shift:** **0.005** ✅ (excelente estabilidade visual)  
   - Score de Performance:** **71/100**
-- **Notas**:
+  - **Notas**:
   - O carregamento inicial é rápido e estável, com FCP inferior a 1 segundo.
   - O principal gargalo está no **Largest Contentful Paint (LCP)** de 5,5s — causado principalmente por imagens grandes e scripts não otimizados.
   - Recomenda-se:
