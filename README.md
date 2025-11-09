@@ -349,6 +349,38 @@ O teste foi realizado com o [Apache JMeter](https://jmeter.apache.org/) simuland
 
 </details>
 
+## 🚀 Testes de Desempenho
+
+<details>
+<summary>📱 <b>Relatório - Testes com Lighthouse e NVDA (clicar para expandir)</b></summary>
+
+### Checklist de Validações:
+
+| Validações | cadastro | profissionais | login | perfil |
+|------------|----------|---------------|-------|--------|
+| foco visível (ex: borda, sombra) | OK | OK | OK | OK |
+| ordem de navegação | OK | OK | OK | OK |
+| nenhum elemento essencial fica inacessível | NOK | NOK | OK | OK |
+| Labels de inputs são lidos corretamente | Parcial | Parcial | Parcial | Parcial |
+| Score ≥ 90 | 100% | 100% | 100% | 100% |
+
+### Evidências:
+
+- Durante o teste foi percebido que navegando pela a tecla Tab não é possível selecionar os botões 'termos de uso' e 'Tenho 18 anos ou mais'
+
+<p align="center">
+  <img src="tests/acessibilidade/acessibilidade_cadastro_evidence.png" alt="Resumo Teste de Carga" width="600"/>
+</p>
+
+- Durante o teste na lista de profissionais, foi percebido que navegando pela tecla Tab não é possível
+ser redirecionado ao clicar em '+ informações'
+
+<p align="center">
+  <img src="tests/acessibilidade/acessibilidade_profissional_evidence.png" alt="Resumo Teste de Carga" width="600"/>
+</p>
+
+</details>
+
 
 
 
