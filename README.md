@@ -4,6 +4,8 @@ Repositório contendo casos de teste (Gherkin), automação (Cypress + Cucumber)
 
 ## 📁 Estrutura
 
+📄 Como este projeto está organizado:
+
 ## 💻 Execução Manual em Mobile (Android - DevTools)
 
 <details>
@@ -167,6 +169,9 @@ Validações realizadas (cenário negativo E-mail não cadastrado):
 
 ## 🚀 Automação e CI/CD
 
+<details>
+<summary>📱 <b>Clicar para expandir</b></summary>
+
 ### ⚙️ Configuração do ambiente
 **Requisitos:**
 - Node.js v20+
@@ -176,6 +181,8 @@ Validações realizadas (cenário negativo E-mail não cadastrado):
   ```bash
   npm install
   ```
+### Casos de testes organizados na pasta:
+tests/automation/cypress/cucumber/cadastro.feature
 
 ---
 
@@ -192,7 +199,7 @@ npx cypress run --spec "tests/automation/cypress/cucumber/cadastro.feature"
 npx cypress open
 ```
 
-> Dica: no modo interativo, selecione o navegador **Electron** (padrão) e clique na spec `cadastro.feature` para executar o fluxo completo.
+> Recomendado: no modo interativo, selecione o navegador **Electron** (padrão) e clique na spec `cadastro.feature` para executar o fluxo completo.
 
 ---
 
@@ -217,7 +224,6 @@ import "cypress-mochawesome-reporter/register";
 
 **Saída esperada:**
 - Relatórios: `tests/automation/reports/*.html`
-- Vídeos: `cypress/videos/`
 - Screenshots: `cypress/screenshots/`
 
 ---
@@ -263,26 +269,7 @@ jobs:
             cypress/screenshots/**
 ```
 
----
-
-### 📁 Estrutura das pastas
-```
-tests/
-├─ automation/
-│  ├─ cypress/
-│  │  ├─ cucumber/
-│  │  │  └─ cadastro.feature
-│  │  ├─ e2e/
-│  │  │  └─ cadastro.cy.ts
-│  │  ├─ support/
-│  │  │  └─ e2e.ts
-│  │  └─ reports/
-│  └─ ...
-└─ manual/
-   ├─ features/
-   ├─ evidence/
-   └─ ...
-```
+</details>
 
 ## 🚀 Testes de Desempenho
 
@@ -349,7 +336,7 @@ O teste foi realizado com o [Apache JMeter](https://jmeter.apache.org/) simuland
 
 </details>
 
-## 🚀 Testes de Desempenho
+## 🚀 Testes de Acessibilidade
 
 <details>
 <summary>📱 <b>Relatório - Testes com DevTools, Lighthouse e NVDA (clicar para expandir)</b></summary>
@@ -386,7 +373,7 @@ ser redirecionado ao clicar em '+ informações'
 <details>
 <summary>📱 <b>Relatório - Testes com DevTools (clicar para expandir)</b></summary>
 
-### Checklist de Validações:
+- **Cenário de teste**: `tests/responsividade/responsividade.feature
 
 ### Ambiente:
 
@@ -397,6 +384,8 @@ ser redirecionado ao clicar em '+ informações'
 - Desktop: Windows
 - Viewport: 1440 × 900 px
 
+### Checklist de Validações:
+
 | Validações | mobile| desktop |
 |------------|-------|---------|
 | Layout | OK | OK |
@@ -404,6 +393,23 @@ ser redirecionado ao clicar em '+ informações'
 | Usabilidade | OK | OK |
 
 </details>
+
+## 🔐 Checklist de Segurança
+
+- [x] Uso de HTTPS em todas as rotas
+- [x] Inputs de senha mascarados
+- [] Prevenção básica contra XSS
+- [x] Mensagens de erro não expõem informações sensíveis
+- [x] Sem exposição de tokens ou senhas na UI ou responses
+
+### Evidências:
+
+- Ao executar o Lighthouse foi observado que o aplicativo falhou em um dos critérios de segurança
+
+<p align="center">
+  <img src="tests/evidencia_não_prevencao_xss.png.png" alt="Risco ataque XSS" width="600"/>
+</p>
+
 
 
 
