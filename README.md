@@ -407,7 +407,7 @@ ser redirecionado ao clicar em '+ informações'
 - Ao executar o Lighthouse foi observado que o aplicativo falhou em um dos critérios de segurança
 
 <p align="center">
-  <img src="tests/evidencia_não_prevencao_xss.png.png" alt="Risco ataque XSS" width="600"/>
+  <img src="tests/evidencia_não_prevencao_xss.png" alt="Risco ataque XSS" width="600"/>
 </p>
 
 
