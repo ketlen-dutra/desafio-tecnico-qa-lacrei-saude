@@ -1,8 +1,10 @@
 # 🧪 Desafio Técnico QA - Lacrei Saúde
 
-Repositório contendo casos de teste (Gherkin), automação (Cypress + Cucumber), documentação e relatórios.
+Repositório contendo testes da plataforma Lacrei Saúde com: testes funcionais (Gherkin), automação (Cypress + Cucumber),performance, acessibilidade, responsividade, checklist de segurança, documentação e relatórios.
 
-## 📁 Estrutura
+## 📁 Link para o Notion:
+
+- url: "https://complex-barberry-25f.notion.site/ebd/2a20ff41317e804e89d6ea07fcfab075"
 
 📄 Como este projeto está organizado:
 
