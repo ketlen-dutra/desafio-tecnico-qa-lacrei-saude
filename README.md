@@ -11,7 +11,7 @@ Repositório contendo testes da plataforma Lacrei Saúde com: testes funcionais 
 ## 💻 Execução Manual em Mobile (Android - DevTools)
 
 <details>
-<summary>📱 <b>Fluxo: Cadastro da pessoa usuária (clicar para expandir)</b></summary>
+<summary> <b>Fluxo: Cadastro da pessoa usuária (clicar para expandir)</b></summary>
 
 Ambiente:
 - Dispositivo simulado: samsung Galaxy S20 Ultra
@@ -52,7 +52,7 @@ Validações realizadas (cenário negativo Cadastro com e-mail já cadastrado):
 </details>
 
 <details>
-<summary>📱 <b>Fluxo: Buscar e contatar profissional (clicar para expandir)</b></summary>
+<summary> <b>Fluxo: Buscar e contatar profissional (clicar para expandir)</b></summary>
 
 Ambiente:
 - Dispositivo simulado: samsung Galaxy S20 Ultra
@@ -89,7 +89,7 @@ Validações realizadas (cenário negativo Preencher campo código com código i
 </details>
 
 <details>
-<summary>📱 <b>Fluxo: Edicão de perfil (clicar para expandir)</b></summary>
+<summary> <b>Fluxo: Edicão de perfil (clicar para expandir)</b></summary>
 
 Ambiente:
 - Dispositivo simulado: samsung Galaxy S20 Ultra
@@ -136,7 +136,7 @@ Validações realizadas (cenário negativo Preencher campo "Nome civil ou social
 </details>
 
 <details>
-<summary>📱 <b>Fluxo: Recuperação de senha (clicar para expandir)</b></summary>
+<summary> <b>Fluxo: Recuperação de senha (clicar para expandir)</b></summary>
 
 Ambiente:
 - Dispositivo simulado: samsung Galaxy S20 Ultra
@@ -172,7 +172,7 @@ Validações realizadas (cenário negativo E-mail não cadastrado):
 ## 🚀 Automação e CI/CD
 
 <details>
-<summary>📱 <b>Clicar para expandir</b></summary>
+<summary> <b>Automação mobile cypress + cucumber (clique para expandir)</b></summary>
 
 ### ⚙️ Configuração do ambiente
 **Requisitos:**
@@ -273,10 +273,10 @@ jobs:
 
 </details>
 
-## 🚀 Testes de Desempenho (Performance)
+## 📊 Testes de Desempenho (Performance)
 
 <details>
-<summary>📱 <b>Tempo de resposta (clicar para expandir)</b></summary>
+<summary> <b>Tempo de resposta (clicar para expandir)</b></summary>
 
 - **Cenário de teste**: `tests/performance/performance.feature
 - **URL testada**: https://paciente.lacreisaude.com.br/cadastro
@@ -307,7 +307,7 @@ jobs:
   </details>
 
 <details>
-<summary>📱 <b>Teste de carga - Tela Cadastro (clicar para expandir)</b></summary>
+<summary> <b>Teste de carga - Tela Cadastro (clicar para expandir)</b></summary>
 
 O teste foi realizado com o [Apache JMeter](https://jmeter.apache.org/) simulando **30 usuários simultâneos** acessando o fluxo de cadastro no ambiente `https://paciente.lacreisaude.com.br/cadastro/`.
 
@@ -338,10 +338,10 @@ O teste foi realizado com o [Apache JMeter](https://jmeter.apache.org/) simuland
 
 </details>
 
-## 🚀 Testes de Acessibilidade
+## ♿ Testes de Acessibilidade
 
 <details>
-<summary>📱 <b>Relatório - Testes com DevTools, Lighthouse e NVDA (clicar para expandir)</b></summary>
+<summary> <b>Relatório - Testes com DevTools, Lighthouse e NVDA (clicar para expandir)</b></summary>
 
 ### Checklist de Validações:
 
@@ -370,10 +370,10 @@ ser redirecionado ao clicar em '+ informações'
 
 </details>
 
-## 🚀 Testes de Responsividade
+## ⚡ Testes de Responsividade
 
 <details>
-<summary>📱 <b>Relatório - Testes com DevTools + Lighthouse (clicar para expandir)</b></summary>
+<summary> <b>Relatório - Testes com DevTools + Lighthouse (clicar para expandir)</b></summary>
 
 - **Cenário de teste**: `tests/responsividade/responsividade.feature
 
