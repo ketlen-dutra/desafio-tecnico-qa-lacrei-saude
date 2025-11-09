@@ -271,7 +271,7 @@ jobs:
 
 </details>
 
-## 🚀 Testes de Desempenho
+## 🚀 Testes de Desempenho (Performance)
 
 <details>
 <summary>📱 <b>Tempo de resposta (clicar para expandir)</b></summary>
@@ -371,7 +371,7 @@ ser redirecionado ao clicar em '+ informações'
 ## 🚀 Testes de Responsividade
 
 <details>
-<summary>📱 <b>Relatório - Testes com DevTools (clicar para expandir)</b></summary>
+<summary>📱 <b>Relatório - Testes com DevTools + Lighthouse (clicar para expandir)</b></summary>
 
 - **Cenário de teste**: `tests/responsividade/responsividade.feature
 
@@ -383,6 +383,10 @@ ser redirecionado ao clicar em '+ informações'
 - Viewport: 412 × 915 px
 - Desktop: Windows
 - Viewport: 1440 × 900 px
+
+### Telas validadas:
+- Mobile: Tela de cadastro
+- Desktop: Busca profissional
 
 ### Checklist de Validações:
 
@@ -398,7 +402,7 @@ ser redirecionado ao clicar em '+ informações'
 
 - [x] Uso de HTTPS em todas as rotas
 - [x] Inputs de senha mascarados
-- [] Prevenção básica contra XSS
+- [ ] Prevenção básica contra XSS
 - [x] Mensagens de erro não expõem informações sensíveis
 - [x] Sem exposição de tokens ou senhas na UI ou responses
 
