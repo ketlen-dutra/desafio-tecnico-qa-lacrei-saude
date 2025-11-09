@@ -91,7 +91,7 @@ When("clico em Entrar", () => {
 });
 
 Then("sou redirecionado para a página de boas-vindas", () => {
-    cy.visit("https://paciente.lacreisaude.com.br/");
+    cy.visit("https://paciente-staging.lacreisaude.com.br/");
   //cy.url().should("include", "/pos-cadastro");
 });
 
