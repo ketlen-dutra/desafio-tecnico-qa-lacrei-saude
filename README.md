@@ -352,7 +352,7 @@ O teste foi realizado com o [Apache JMeter](https://jmeter.apache.org/) simuland
 ## 🚀 Testes de Desempenho
 
 <details>
-<summary>📱 <b>Relatório - Testes com Lighthouse e NVDA (clicar para expandir)</b></summary>
+<summary>📱 <b>Relatório - Testes com DevTools, Lighthouse e NVDA (clicar para expandir)</b></summary>
 
 ### Checklist de Validações:
 
@@ -378,6 +378,30 @@ ser redirecionado ao clicar em '+ informações'
 <p align="center">
   <img src="tests/acessibilidade/acessibilidade_profissional_evidence.png" alt="Resumo Teste de Carga" width="600"/>
 </p>
+
+</details>
+
+## 🚀 Testes de Responsividade
+
+<details>
+<summary>📱 <b>Relatório - Testes com DevTools (clicar para expandir)</b></summary>
+
+### Checklist de Validações:
+
+### Ambiente:
+
+- Navegador: Google Chrome DevTools (versão 142)
+- User Agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Mobile Safari/537.36
+- Mobile: samsung Galaxy S20 Ultra
+- Viewport: 412 × 915 px
+- Desktop: Windows
+- Viewport: 1440 × 900 px
+
+| Validações | mobile| desktop |
+|------------|-------|---------|
+| Layout | OK | OK |
+| Funcionalidade | OK | OK |
+| Usabilidade | OK | OK |
 
 </details>
 
